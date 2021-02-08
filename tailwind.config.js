@@ -2,6 +2,24 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      navBar: 'var(--nav-bar-color)',
+      onNavBar: 'var(--on-nav-bar-color)',
+      primary: 'var(--primary-color)',
+      primaryVariant: 'var(--primary-color-variant)',
+      secondary: 'var(--secondary-color)',
+      secondaryVariant: 'var(--secondary-color-variant)',
+      background: 'var(--background-color)',
+      surface: 'var(--surface-color)',
+      error: 'var(--error-color)',
+      onPrimary: 'var(--on-primary-color)',
+      onSecondary: 'var(--on-secondary-color)',
+      onBackground: 'var(--on-background-color)',
+      onSurface: 'var(--on-surface-color)',
+      onError: 'var(--on-error-color)',
+    },
     screens: {
       sm: "640px",
       // => @media (min-width: 640px) { ... }

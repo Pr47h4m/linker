@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/", controller.getIndex);
 
-router.get("/:username", controller.getProfile);
+router.get("/@:username", controller.getProfile);
 
 router.use("/", controller.get404);
 
