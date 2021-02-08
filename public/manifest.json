@@ -1,0 +1,13 @@
+{
+  "name": "Linker",
+  "short_name": "Linker",
+  "description": "With ♥ by Pratham Jaiswal",
+  "orientation": "portrait-primary",
+  "display": "standalone",
+  "scope": ".",
+  "dir": "ltr",
+  "lang": "en-US",
+  "start_url": ".",
+  "background_color": "#fff",
+  "theme_color": "#3700b3"
+}
