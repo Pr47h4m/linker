@@ -1,22 +1,10 @@
 @import "/css/theme.css";
 
-/*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
-
-/*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-
-/**
-Use a better box model (opinionated).
-*/
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
-/**
-Use a more readable tab size (opinionated).
-*/
 
 :root {
   -moz-tab-size: 4;
