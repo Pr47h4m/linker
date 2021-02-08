@@ -1,0 +1,25 @@
+{
+  "name": "linker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js",
+    "start": "node app.js",
+    "build-css": "tailwindcss build ./src/css/styles.css -o ./public/css/styles.css"
+  },
+  "author": "Pratham Jaiswal",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "postcss": "^8.2.5",
+    "tailwindcss": "^2.0.3"
+  }
+}
