@@ -10,6 +10,10 @@ exports.getSignUp = (req, res, next) => {
   res.render("join");
 };
 
+exports.addUser = (req, res, next) => {
+  //...
+};
+
 exports.getAboutUs = (req, res, next) => {
   res.render("about-us");
 };
