@@ -1,0 +1,39 @@
+<header>
+  <nav>
+    <div class="title">
+      <span> Linker </span>
+    </div>
+    <ul id="hamburger-menu" class="hidden">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about-us">About</a></li>
+      <li><a href="/contact-us">Contact</a></li>
+      <li><a href="/join">Join</a></li>
+    </ul>
+    <div id="hamburger">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </div>
+  </nav>
+</header>
+<script>
+  const hamburgerMenu = document.getElementById("hamburger");
+  const menuItems = document.getElementById("hamburger-menu");
+  hamburgerMenu.addEventListener("click", () => {
+    if (menuItems.classList.contains("hidden")) {
+      menuItems.classList.remove("hidden");
+    } else {
+      menuItems.classList.add("hidden");
+    }
+  });
+</script>

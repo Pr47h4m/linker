@@ -6,6 +6,18 @@ exports.getIndex = (req, res, next) => {
   res.render("index");
 };
 
+exports.getSignUp = (req, res, next) => {
+  res.render("join");
+};
+
+exports.getAboutUs = (req, res, next) => {
+  res.render("about-us");
+};
+
+exports.getContactUs = (req, res, next) => {
+  res.render("contact-us");
+};
+
 exports.getProfile = (req, res, next) => {
   const username = req.params.username;
   User.fetch(username)
