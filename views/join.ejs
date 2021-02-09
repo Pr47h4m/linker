@@ -8,43 +8,75 @@
   <body>
     <%- include('./includes/header.ejs') %>
     <main class="md:grid grid-cols-4 mt-8 p-2">
-      <form class="col-start-2 col-span-2 bg-surface p-8 rounded-md mb-4 md:flex md:flex-wrap md:justify-between" action="/add-user" method="post">
+      <form
+        class="col-start-2 col-span-2 bg-surface p-8 rounded-md mb-4 md:flex md:flex-wrap md:justify-between"
+        action="/add-user"
+        method="post"
+      >
         <div class="flex justify-center pb-4 md:w-full">
           <span class="uppercase text-4xl font-medium">JOIN</span>
         </div>
         <div class="flex flex-col mb-4 md:w-1/2">
           <label>Username</label>
-          <input type="text" name="username">
+          <input type="text" name="username" />
         </div>
         <div class="flex flex-col mb-4 md:w-full">
           <label>Tagline</label>
-          <input type="text" name="tagline">
+          <input type="text" name="tagline" />
         </div>
-        <div class="flex flex-col mb-4 md:w-full">
-          <label>Image Url</label>
-          <input type="url" name="imageUrl">
+        <div class="flex mb-6 justify-center md:w-1/3">
+          <img src="/images/default-avatar.png" class="h-24 w-24 rounded" alt="preview">
         </div>
-        <div class="flex flex-col mb-6 md:w-full">
-          <label>Link 1</label>
-          <input type="url" name="link1">
+        <div class="flex flex-col mb-4 md:w-2/3">
+          <label class="md:ml-2">Image Url</label>
+          <input class="md:ml-2" type="url" name="imageUrl" />
         </div>
-        <div class="flex flex-col mb-6 md:w-full">
-          <label>Link 2</label>
-          <input type="url" name="link2">
+        <div class="flex flex-col mb-6 md:w-1/3">
+          <label class="md:mr-2">Title 1</label>
+          <input type="url" class="md:mr-2" name="title1" />
         </div>
-        <div class="flex flex-col mb-6 md:w-full">
-          <label>Link 3</label>
-          <input type="url" name="link3">
+        <div class="flex flex-col mb-6 md:w-2/3">
+          <label class="md:ml-2">Link 1</label>
+          <input type="url" class="md:ml-2" name="link1" />
         </div>
-        <div class="flex flex-col mb-6 md:w-full">
-          <label>Link 4</label>
-          <input type="url" name="link4">
+        <div class="flex flex-col mb-6 md:w-1/3">
+          <label class="md:mr-2">Title 2</label>
+          <input type="url" class="md:mr-2" name="title2" />
         </div>
-        <div class="flex flex-col mb-6 md:w-full">
-          <label>Link 5</label>
-          <input type="url" name="link5">
+        <div class="flex flex-col mb-6 md:w-2/3">
+          <label class="md:ml-2">Link 2</label>
+          <input type="url" class="md:ml-2" name="link2" />
         </div>
-        <button class="block bg-secondary hover:bg-secondaryVariant text-white uppercase text-lg mx-auto p-3 rounded" type="submit">Create Account</button>
+        <div class="flex flex-col mb-6 md:w-1/3">
+          <label class="md:mr-2">Title 3</label>
+          <input type="url" class="md:mr-2" name="title3" />
+        </div>
+        <div class="flex flex-col mb-6 md:w-2/3">
+          <label class="md:ml-2">Link 3</label>
+          <input type="url" class="md:ml-2" name="link3" />
+        </div>
+        <div class="flex flex-col mb-6 md:w-1/3">
+          <label class="md:mr-2">Title 4</label>
+          <input type="url" class="md:mr-2" name="title4" />
+        </div>
+        <div class="flex flex-col mb-6 md:w-2/3">
+          <label class="md:ml-2">Link 4</label>
+          <input type="url" class="md:ml-2" name="link4" />
+        </div>
+        <div class="flex flex-col mb-6 md:w-1/3">
+          <label class="md:mr-2">Title 5</label>
+          <input type="url" class="md:mr-2" name="title5" />
+        </div>
+        <div class="flex flex-col mb-6 md:w-2/3">
+          <label class="md:ml-2">Link 5</label>
+          <input type="url" class="md:ml-2" name="link5" />
+        </div>
+        <button
+          class="block bg-secondary hover:bg-secondaryVariant text-white uppercase text-lg mx-auto p-3 rounded"
+          type="submit"
+        >
+          Create Account
+        </button>
       </form>
     </main>
     <%- include('./includes/scroll-to-top.ejs') %> <%-

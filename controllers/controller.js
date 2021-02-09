@@ -11,7 +11,10 @@ exports.getSignUp = (req, res, next) => {
 };
 
 exports.addUser = (req, res, next) => {
-  //...
+  const body = req.body;
+  const newUser = new User({ id: body.username, imageUrl: body.imageUrl, links: [body.link1, body.link2, body.link3, body.link4, body.link5], tagline: body.tagline });
+  console.log(newUser);
+  res.end();
 };
 
 exports.getAboutUs = (req, res, next) => {

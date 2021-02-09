@@ -36,7 +36,7 @@ ul#hamburger-menu li {
 }
 
 form label {
-    @apply mb-2 uppercase font-semibold text-lg text-onSurface;
+    @apply mb-2 uppercase font-medium text-lg text-onSurface;
 }
 
 form input {
