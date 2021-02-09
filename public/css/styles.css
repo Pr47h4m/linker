@@ -1,10 +1,27 @@
 @import "/css/theme.css";
 
+/*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
+
+/*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
+/**
+Use a more readable tab size (opinionated).
+*/
 
 :root {
   -moz-tab-size: 4;
@@ -351,7 +368,7 @@ ul {
  */
 
 html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -4019,15 +4036,7 @@ video {
 }
 
 .font-sans{
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.font-serif{
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.font-mono{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .font-thin{
@@ -18199,6 +18208,106 @@ video {
           animation: bounce 1s infinite;
 }
 
+body {
+  background-color: var(--background-color);
+  color: var(--on-background-color);
+}
+
+header {
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+nav {
+  background-color: var(--nav-bar-color);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  color: var(--on-nav-bar-color);
+}
+
+@media (min-width: 768px){
+  nav{
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
+}
+
+nav .title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px){
+  nav .title{
+    grid-column: span 5 / span 5;
+  }
+}
+
+@media (min-width: 1024px){
+  nav .title{
+    grid-column: span 6 / span 6;
+  }
+}
+
+ul#hamburger-menu {
+  background-color: var(--nav-bar-color);
+  align-self: center;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  width: 100%;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+@media (min-width: 768px){
+  ul#hamburger-menu{
+    display: grid;
+    position: relative;
+    top: 0px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column: span 4 / span 4;
+  }
+}
+
+@media (min-width: 1024px){
+  ul#hamburger-menu{
+    grid-column: span 3 / span 3;
+  }
+}
+
+ul#hamburger-menu li {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+#hamburger {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+@media (min-width: 768px){
+  #hamburger{
+    display: none;
+  }
+}
+
+#hamburger svg {
+  width: 2rem;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
@@ -21683,15 +21792,7 @@ video {
   }
 
   .sm\:font-sans{
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .sm\:font-serif{
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .sm\:font-mono{
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 
   .sm\:font-thin{
@@ -39269,15 +39370,7 @@ video {
   }
 
   .md\:font-sans{
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .md\:font-serif{
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .md\:font-mono{
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 
   .md\:font-thin{
@@ -56855,15 +56948,7 @@ video {
   }
 
   .lg\:font-sans{
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  }
-
-  .lg\:font-serif{
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  }
-
-  .lg\:font-mono{
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: Nunito, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 
   .lg\:font-thin{

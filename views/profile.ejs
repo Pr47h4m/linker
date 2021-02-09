@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('./includes/meta.ejs') %>
-    <%- include('./includes/styles.ejs') %> 
-    <title>Linker</title>
-</head>
-<body>
-    
-    <%- include('./includes/scroll-to-top.ejs') %>
-    <%- include('./includes/scripts.ejs') %>
-</body>
+  <head>
+    <%- include('./includes/meta.ejs') %> <%- include('./includes/styles.ejs')
+    %>
+    <title><%= userData.username %> | Linker</title>
+  </head>
+  <body
+    class="bg-cover bg-no-repeat bg-scroll md:bg-fixed"
+    style="background-image: url('<%= userData.bgImageUrl %>')"
+  >
+    <main class="p-6 md:p-10">
+      <div class="flex justify-center">
+        <div class="overflow-hidden rounded-full h-28 w-28 object-cover">
+          <img src="<%= userData.imageUrl %>" alt="<%= userData.username %> " />
+        </div>
+      </div>
+      <div class="tagline flex justify-center p-1 text-base font-semibold uppercase">
+        <span>@<%=userData.username%></span>
+      </div>
+      <div class="tagline flex justify-center p-1 mb-4 text-base uppercase">
+        <span><%= userData.tagline %> </span>
+      </div>
+      <div class="md:flex justify-center">
+        <button
+          class="w-full md:w-1/2 lg:1/3 p-3 bg-primary rounded-md uppercase text-onPrimary"
+        >
+          <a href="#" class="">LinkedIn</a>
+        </button>
+      </div>
+      <br />
+      <div class="md:flex justify-center">
+        <button
+          class="w-full md:w-1/2 lg:1/3 p-3 bg-primary rounded-md uppercase text-onPrimary"
+        >
+          <a href="#" class="">LinkedIn</a>
+        </button>
+      </div>
+      <br />
+      <div class="md:flex justify-center">
+        <button
+          class="w-full md:w-1/2 lg:1/3 p-3 bg-primary rounded-md uppercase text-onPrimary"
+        >
+          <a href="#" class="">LinkedIn</a>
+        </button>
+      </div>
+      <br />
+      <div class="md:flex justify-center">
+        <button
+          class="w-full md:w-1/2 lg:1/3 p-3 bg-primary rounded-md uppercase text-onPrimary"
+        >
+          <a href="#" class="">LinkedIn</a>
+        </button>
+      </div>
+      <br />
+      <div class="md:flex justify-center">
+        <button
+          class="w-full md:w-1/2 lg:1/3 p-3 bg-primary rounded-md uppercase text-onPrimary"
+        >
+          <a href="#" class="">LinkedIn</a>
+        </button>
+      </div>
+      <br />
+      <div class="md:flex justify-center">
+        <button
+          class="w-full md:w-1/2 lg:1/3 p-3 bg-primary rounded-md uppercase text-onPrimary"
+        >
+          <a href="#" class="">LinkedIn</a>
+        </button>
+      </div>
+      <br />
+      <div class="md:flex justify-center">
+        <button
+          class="w-full md:w-1/2 lg:1/3 p-3 bg-primary rounded-md uppercase text-onPrimary"
+        >
+          <a href="#" class="">LinkedIn</a>
+        </button>
+      </div>
+      <br />
+    </main>
+    <%- include('./includes/scroll-to-top.ejs') %> <%-
+    include('./includes/scripts.ejs') %>
+  </body>
 </html>

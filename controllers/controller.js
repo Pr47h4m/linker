@@ -6,7 +6,14 @@ exports.getIndex = (req, res, next) => {
 
 exports.getProfile = (req, res, next) => {
   const username = req.params.username;
-  res.render("profile", { userData: { username: username } });
+  res.render("profile", {
+    userData: {
+      username: username,
+      imageUrl: "/images/default-avatar.png",
+      tagline: "I'm a full-stack web / app developer.",
+      bgImageUrl: "/images/bg-1.jpg",
+    },
+  });
 };
 
 exports.get404 = (req, res, next) => {

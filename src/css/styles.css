@@ -2,3 +2,35 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+body {
+    @apply bg-background text-onBackground;
+}
+
+header {
+    @apply shadow-sm;
+}
+
+nav {
+    @apply relative flex justify-between md:grid md:grid-cols-9 bg-navBar text-onNavBar;
+}
+
+nav .title {
+    @apply md:col-span-5 lg:col-span-6 uppercase text-2xl font-semibold p-4;
+}
+
+ul#hamburger-menu {
+    @apply transition ease-out duration-200 absolute top-full md:relative md:top-0 bg-navBar md:col-span-4 lg:col-span-3 md:grid md:grid-cols-4 self-center text-center text-lg w-full;
+}
+
+ul#hamburger-menu li {
+    @apply p-4 uppercase text-sm;
+}
+
+#hamburger {
+    @apply flex items-center p-4 md:hidden;
+}
+
+#hamburger svg {
+    @apply w-8;
+}
