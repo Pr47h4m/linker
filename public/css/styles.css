@@ -18308,6 +18308,26 @@ ul#hamburger-menu li {
   width: 2rem;
 }
 
+form label {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--on-surface-color);
+  text-transform: uppercase;
+}
+
+form input {
+  background-color: var(--surface-color);
+  border-radius: 0.25rem;
+  border-width: 1px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  color: var(--on-surface-color);
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;

@@ -6,8 +6,48 @@
     <title>Join | Linker</title>
   </head>
   <body>
-    <%- include('./includes/header.ejs') %> <%-
-    include('./includes/scroll-to-top.ejs') %> <%-
+    <%- include('./includes/header.ejs') %>
+    <main class="md:grid grid-cols-4 mt-8 p-2">
+      <form class="col-start-2 col-span-2 bg-surface p-8 rounded-md mb-4 md:flex md:flex-wrap md:justify-between" action="/add-user" method="post">
+        <div class="flex justify-center pb-4 md:w-full">
+          <span class="uppercase text-4xl font-medium">JOIN</span>
+        </div>
+        <div class="flex flex-col mb-4 md:w-1/2">
+          <label>Username</label>
+          <input type="text" name="username">
+        </div>
+        <div class="flex flex-col mb-4 md:w-full">
+          <label>Tagline</label>
+          <input type="text" name="tagline">
+        </div>
+        <div class="flex flex-col mb-4 md:w-full">
+          <label>Image Url</label>
+          <input type="url" name="imageUrl">
+        </div>
+        <div class="flex flex-col mb-6 md:w-full">
+          <label>Link 1</label>
+          <input type="url" name="link1">
+        </div>
+        <div class="flex flex-col mb-6 md:w-full">
+          <label>Link 2</label>
+          <input type="url" name="link2">
+        </div>
+        <div class="flex flex-col mb-6 md:w-full">
+          <label>Link 3</label>
+          <input type="url" name="link3">
+        </div>
+        <div class="flex flex-col mb-6 md:w-full">
+          <label>Link 4</label>
+          <input type="url" name="link4">
+        </div>
+        <div class="flex flex-col mb-6 md:w-full">
+          <label>Link 5</label>
+          <input type="url" name="link5">
+        </div>
+        <button class="block bg-secondary hover:bg-secondaryVariant text-white uppercase text-lg mx-auto p-3 rounded" type="submit">Create Account</button>
+      </form>
+    </main>
+    <%- include('./includes/scroll-to-top.ejs') %> <%-
     include('./includes/scripts.ejs') %>
   </body>
 </html>

@@ -1,35 +1,31 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
+  width: 5px;
+  height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: var(--nav-bar-color);
+  border-radius: 10px;
+  background-color: var(--nav-bar-color);
 }
 
 ::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-input {
-    color: var(--on-background-color);
+  background-color: transparent;
 }
 
 #scroll-to-top {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    border: none;
-    background-color: var(--secondary-color);
-    color: white;
-    display: none;
-    z-index: 10;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
+  display: none;
+  z-index: 10;
 }
