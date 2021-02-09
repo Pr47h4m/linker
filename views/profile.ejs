@@ -31,9 +31,28 @@
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
           "
-          class="p-2 rounded border-2 text-onSecondary"
-          >@<%=userData.username%></span
-        >
+          class="p-2 rounded border-2 relative text-onSecondary"
+          >@<%=userData.username%>
+          <svg
+            class="w-6 absolute -right-3 -top-3 transform-gpu rotate-45"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="#FFD700"
+          >
+            <path fill="#FFD700" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path
+              fill="none"
+              d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+            />
+          </svg>
+        </span>
       </div>
       <div class="tagline flex justify-center p-1 mb-4 text-base uppercase">
         <span
@@ -64,6 +83,12 @@
       <br />
       <% } %>
     </main>
+    <footer>
+      <div class="flex justify-center items-center text-onSecondary">
+        With ♥ by
+        <a href="/" class="ml-1 uppercase italic font-semibold"> Linker</a>
+      </div>
+    </footer>
     <%- include('./includes/scroll-to-top.ejs') %> <%-
     include('./includes/scripts.ejs') %>
   </body>
