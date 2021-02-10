@@ -4,15 +4,15 @@
 @import "tailwindcss/utilities";
 
 body {
-  @apply bg-background text-onBackground;
+  @apply bg-background text-onBackground select-none;
 }
 
 header {
-  @apply shadow-sm;
+  @apply shadow-sm h-16;
 }
 
 nav {
-  @apply relative flex justify-between md:grid md:grid-cols-9 bg-navBar text-onNavBar;
+  @apply fixed top-0 left-0 flex justify-between md:grid md:grid-cols-9 bg-navBar text-onNavBar w-screen;
 }
 
 nav .title {
@@ -36,9 +36,21 @@ ul#hamburger-menu li {
 }
 
 form label {
-    @apply mb-2 uppercase font-medium text-lg text-onSurface;
+  @apply mb-2 uppercase font-medium text-lg text-onSurface;
 }
 
 form input {
-    @apply border py-2 px-3 text-onSurface bg-surface rounded;
+  @apply border py-2 px-3 text-onSurface bg-surface rounded;
+}
+
+.card {
+  @apply bg-surface rounded-xl shadow-md hover:shadow-lg p-4 border-primary border-2 border-opacity-5;
+}
+
+.card .card-title {
+  @apply text-2xl font-medium mb-2 uppercase text-primary;
+}
+
+.card .card-content {
+  @apply text-lg font-normal;
 }

@@ -6,8 +6,105 @@
     <title>Linker</title>
   </head>
   <body>
-    <%- include('./includes/header.ejs') %> <%-
-    include('./includes/scroll-to-top.ejs') %> <%-
+    <%- include('./includes/header.ejs') %>
+    <main class="p-8">
+      <div class="flex justify-center mb-2 md:mb-4 font-semibold">
+        <span class="text-2xl md:text-4xl lg:text-6xl">
+          The Only Link You’ll Ever Need
+        </span>
+      </div>
+      <div class="flex justify-center mb-10 font-medium">
+        <span class="text-xl md:text-2xl lg:text-3xl">
+          Organize All Your Links Together
+        </span>
+      </div>
+
+      <div class="flex justify-center mb-10">
+        <button
+          class="bg-primary text-onPrimary uppercase text-lg mx-auto p-3 rounded"
+        >
+          <a href="/join"> get started for free Today </a>
+        </button>
+      </div>
+      <div class="flex justify-center">
+        <div>
+          <iframe
+            class="rounded-3xl w-full shadow-md"
+            style="
+              height: calc(100vh - 120px);
+              border-width: 16px;
+              border-color: #1f1f1f;
+            "
+            src="/@pr47h4m"
+          >
+          </iframe>
+          <div class="flex justify-center mt-2 text-sm">
+            <span>Interactive Demo</span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 mt-10"
+      >
+        <div class="card">
+          <div class="card-title">
+            <span> Lorem Ipsum </span>
+          </div>
+          <div class="card-content">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span> Lorem Ipsum </span>
+          </div>
+          <div class="card-content">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span> Lorem Ipsum </span>
+          </div>
+          <div class="card-content">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span> Lorem Ipsum </span>
+          </div>
+          <div class="card-content">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-secondary">
+      <br />
+      <div class="flex justify-center items-center text-onSecondary">
+        With ♥ by
+        <a href="/@pr47h4m" class="ml-1 uppercase italic font-semibold">
+          Pratham Jaiswal</a
+        >
+      </div>
+      <br />
+    </footer>
+    <%- include('./includes/scroll-to-top.ejs') %> <%-
     include('./includes/scripts.ejs') %>
   </body>
 </html>

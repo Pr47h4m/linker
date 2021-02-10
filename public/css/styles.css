@@ -18211,9 +18211,14 @@ video {
 body {
   background-color: var(--background-color);
   color: var(--on-background-color);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 header {
+  height: 4rem;
   --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -18222,8 +18227,11 @@ nav {
   background-color: var(--nav-bar-color);
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   color: var(--on-nav-bar-color);
+  width: 100vw;
 }
 
 @media (min-width: 768px){
@@ -18326,6 +18334,37 @@ form input {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   color: var(--on-surface-color);
+}
+
+.card {
+  background-color: var(--surface-color);
+  border-color: var(--primary-color);
+  --tw-border-opacity: 0.05;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  padding: 1rem;
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.card:hover{
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.card .card-title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.card .card-content {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 @media (min-width: 640px){

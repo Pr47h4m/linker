@@ -9,7 +9,7 @@ module.exports = class User {
   }
 
   save() {
-    db.execute("INSERT INTO users (id, tagline, imageUrl, links) VALUES (?, ?, ?, ?)", [
+    return db.execute("INSERT INTO users (id, tagline, imageUrl, links) VALUES (?, ?, ?, ?)", [
       this.id,
       this.tagline,
       this.imageUrl,

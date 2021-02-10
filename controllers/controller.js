@@ -14,21 +14,24 @@ exports.getSignUp = (req, res, next) => {
 exports.addUser = (req, res, next) => {
   const body = req.body;
   let links = [
-    { "k": body.title1, "v": body.link1 },
-    { "k": body.title2, "v": body.link2 },
-    { "k": body.title3, "v": body.link3 },
-    { "k": body.title4, "v": body.link4 },
-    { "k": body.title5, "v": body.link5 },
+    { k: body.title1, v: body.link1 },
+    { k: body.title2, v: body.link2 },
+    { k: body.title3, v: body.link3 },
+    { k: body.title4, v: body.link4 },
+    { k: body.title5, v: body.link5 },
   ];
-  links = links.filter(link => link.k !== '');
+  links = links.filter((link) => link.k !== "");
   const newUser = new User({
     id: body.username,
     imageUrl: body.imageUrl,
     links: links,
     tagline: body.tagline,
   });
-  newUser.save();
-  res.redirect('/join');
+  newUser.save().then(() => {
+    res.redirect("/@" + body.username)
+  }).catch((err) => {
+    res.redirect("/join");
+  });
 };
 
 exports.getAboutUs = (req, res, next) => {
