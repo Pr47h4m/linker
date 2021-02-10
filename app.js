@@ -1,10 +1,10 @@
 const path = require("path");
 
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const rootDir = require("./utils/root-dir");
 const routes = require("./routes/routes");
-const bodyParser = require("body-parser");
 
 const app = express();
 

@@ -16,7 +16,7 @@ module.exports = class User {
       JSON.stringify(this.links),
     ])
       .then((result) => {
-        console.log(result);
+        // console.log(result);
       })
       .catch((err) => console.error(err));
   }

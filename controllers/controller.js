@@ -1,6 +1,7 @@
 const express = require("express");
 
 const User = require("../models/user");
+const { link } = require("../utils/root-dir");
 
 exports.getIndex = (req, res, next) => {
   res.render("index");
@@ -12,9 +13,22 @@ exports.getSignUp = (req, res, next) => {
 
 exports.addUser = (req, res, next) => {
   const body = req.body;
-  const newUser = new User({ id: body.username, imageUrl: body.imageUrl, links: [body.link1, body.link2, body.link3, body.link4, body.link5], tagline: body.tagline });
-  console.log(newUser);
-  res.end();
+  let links = [
+    { "k": body.title1, "v": body.link1 },
+    { "k": body.title2, "v": body.link2 },
+    { "k": body.title3, "v": body.link3 },
+    { "k": body.title4, "v": body.link4 },
+    { "k": body.title5, "v": body.link5 },
+  ];
+  links = links.filter(link => link.k !== '');
+  const newUser = new User({
+    id: body.username,
+    imageUrl: body.imageUrl,
+    links: links,
+    tagline: body.tagline,
+  });
+  newUser.save();
+  res.redirect('/join');
 };
 
 exports.getAboutUs = (req, res, next) => {
@@ -30,7 +44,6 @@ exports.getProfile = (req, res, next) => {
   User.fetch(username)
     .then(([result]) => {
       if (!!result[0]) {
-        console.log(JSON.parse(result[0].links));
         res.render("profile", {
           userData: {
             username: username,
